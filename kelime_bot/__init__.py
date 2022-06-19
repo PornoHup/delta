@@ -15,10 +15,10 @@ LOGGER = logging.getLogger(__name__)
 
 
 # Hesap
-API_ID = "15781409"
-API_HASH = "0499f7f54f3fbb56b43acb6edf2d9696"
-TOKEN = "5444327778:AAEL9SrrRTKPGkTKIACKSLJ55qlnNNCIGo8" 
-USERNAME = "5444327778"
+API_ID = "12349641"
+API_HASH = "0f9159afc920f9c592df555e4b1cb73b"
+TOKEN = "5383865594:AAHE_1GZxxmHVn1Sn2Q6bdNAtMu9cIsquqE" 
+USERNAME = "5383865594"
 
 
 
@@ -47,5 +47,5 @@ rating = {}
 
 # !!!!!!!!!!!!!! DEĞİŞTİR KESİNLİKLE !!!!!!!!!!!!!!!!
 #      SAHİBİN USER ID'Sİ
-OWNER_ID = 974246367
+OWNER_ID = 5249642922
 
