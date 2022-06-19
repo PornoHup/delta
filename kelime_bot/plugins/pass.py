@@ -21,13 +21,13 @@ async def passs(c:Client, m:Message):
     if aktif:
         if oyun[m.chat.id]["pass"] < 3:
             oyun[m.chat.id]["pass"] += 1 
-            await c.send_message(m.chat.id,f"❗ Toplam 3 geçiş hakkınız var!\n➡️ Kelime Geçişi çıktı !\n✏️ Doğru kelime : **<code>{oyun[m.chat.id]['kelime']}</code>**")
+            await c.send_message(m.chat.id,f"❗ Toplam 3 geçiş hakkınız var!\n➡️ Sözü keçmək çıxtı !\n✏️ Doğru söz : **<code>{oyun[m.chat.id]['söz']}</code>**")
             
-            oyun[m.chat.id]["kelime"] = kelime_sec()
+            oyun[m.chat.id]["söz"] = kelime_sec()
             oyun[m.chat.id]["aktif"] = True
             
             kelime_list = ""
-            kelime = list(oyun[m.chat.id]['kelime'])
+            kelime = list(oyun[m.chat.id]['söz'])
             shuffle(kelime)
             
             for harf in kelime:
@@ -35,12 +35,12 @@ async def passs(c:Client, m:Message):
             
             text = f"""
 🎯 Raund : {oyun[m.chat.id]['round']}/60 
-📝 Kelime :   <code>{kelime_list}</code>
-💰 Kazandığınız Puan : 1
-🔎 İ𝗉𝗎𝖼𝗎 : 1. {oyun[m.chat.id]["kelime"][0]}
-✍🏻 𝖴𝗓𝗎𝗇𝗅uk: {int(len(kelime_list)/2)} 
+📝 Söz :   <code>{kelime_list}</code>
+💰 qazandığınız Puan : 1
+🔎 İ𝗉𝗎𝖼𝗎 : 1. {oyun[m.chat.id]["söz"][0]}
+✍🏻 𝖴𝗓𝗎𝗇𝗅uq: {int(len(kelime_list)/2)} 
 
-✏️ Karışık harflerden doğru kelimeyi bulun
+✏️ qarışıq hərflərdən düzgün sözü tapın 
             """
             await c.send_message(m.chat.id, text)
             
