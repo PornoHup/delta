@@ -14,7 +14,7 @@ keyboard = InlineKeyboardMarkup([
         InlineKeyboardButton("➕ Grubuna Ekle", url=f"http://t.me/TapmacaOyunBot?startgroup=new")
     ],
     [
-        InlineKeyboardButton("🇹🇷 Sahibim", url="https://t.me/Thagiyevvvv"),
+        InlineKeyboardButton("🇦🇿 Sahibim", url="https://t.me/Thagiyevvvv"),
         InlineKeyboardButton("💬 Chat", url="https://t.me/karabakhteamm"),
     ]
 ])
@@ -23,7 +23,7 @@ keyboard = InlineKeyboardMarkup([
 START = """
 **🔮 Salam, Sözləri Tapma oyununa xoş geldin..**
 
-➤ Bilgi için 👉 /help Tıklayın. Komutlar kolay ve basittir. 
+➤ Bilgi için 👉 /help Tıklayın. Komutlar asand ve sadədir. 
 """
 
 HELP = """
@@ -55,7 +55,7 @@ async def kelimeoyun(c:Client, m:Message):
         aktif = False
 
     if aktif:
-        await m.reply("**❗ Oyun Zaten Qrubunuzda Davam Edir ✍🏻 \n Oyunu dayandırmaq üçün yazıp /cancel dayandırabilərsiz")
+        await m.reply("**❗ Oyun onsuzda Qrubunuzda Davam Edir ✍🏻 \n Oyunu dayandırmaq üçün yazıp /cancel dayandırabilərsiz")
     else:
         await m.reply(f"**{m.from_user.mention}** Tarafından! \nSözü Tapma Oyunu Başladı .\n\nİyi Şanslar !", reply_markup=kanal)
         
