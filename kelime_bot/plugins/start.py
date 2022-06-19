@@ -59,7 +59,7 @@ async def kelimeoyun(c:Client, m:Message):
     else:
         await m.reply(f"**{m.from_user.mention}** Tarafından! \nSözü Tapma Oyunu Başladı .\n\nİyi Şanslar !", reply_markup=kanal)
         
-        oyun[m.chat.id] = {"söz":söz_sec()}
+        oyun[m.chat.id] = {"kelime":kelime_sec()}
         oyun[m.chat.id]["aktif"] = True
         oyun[m.chat.id]["round"] = 1
         oyun[m.chat.id]["kec"] = 0
