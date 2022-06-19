@@ -23,11 +23,11 @@ async def passs(c:Client, m:Message):
             oyun[m.chat.id]["kec"] += 1 
             await c.send_message(m.chat.id,f"❗ Toplam 3 keçmə hakkınız var!\n➡️ Sözü keçmək çıxtı !\n✏️ Doğru söz : **<code>{oyun[m.chat.id]['söz']}</code>**")
             
-            oyun[m.chat.id]["söz"] = kelime_sec()
+            oyun[m.chat.id]["kelime"] = kelime_sec()
             oyun[m.chat.id]["aktif"] = True
             
             kelime_list = ""
-            kelime = list(oyun[m.chat.id]['söz'])
+            kelime = list(oyun[m.chat.id]['kec'])
             shuffle(kelime)
             
             for harf in kelime:
@@ -37,7 +37,7 @@ async def passs(c:Client, m:Message):
 🎯 Raund : {oyun[m.chat.id]['round']}/60 
 📝 Söz :   <code>{kelime_list}</code>
 💰 Qazandığınız Rəqəm : 1
-🔎 İ𝗉𝗎𝖼𝗎 : 1. {oyun[m.chat.id]["söz"][0]}
+🔎 İ𝗉𝗎𝖼𝗎 : 1. {oyun[m.chat.id]["kec"][0]}
 ✍🏻 𝖴𝗓𝗎𝗇𝗅uq: {int(len(kelime_list)/2)} 
 
 ✏️ Qarışıq hərflərdən düzgün sözü tapın 
