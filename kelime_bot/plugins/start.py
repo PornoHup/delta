@@ -11,11 +11,11 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 keyboard = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton("➕ Grubuna Ekle", url=f"http://t.me/KelimeHazinesiBot?startgroup=new")
+        InlineKeyboardButton("➕ Grubuna Ekle", url=f"http://t.me/TapmacaOyunBot?startgroup=new")
     ],
     [
-        InlineKeyboardButton("🇹🇷 Sahibim", url="https://t.me/nevarevladim"),
-        InlineKeyboardButton("💬 Chat", url="https://t.me/+0kf_3zSzsCszZWJk"),
+        InlineKeyboardButton("🇹🇷 Sahibim", url="https://t.me/Thagiyevvvv"),
+        InlineKeyboardButton("💬 Chat", url="https://t.me/karabakhteamm"),
     ]
 ])
 
@@ -28,9 +28,9 @@ START = """
 
 HELP = """
 **✌️ Komutlar Menüsüne Hoşgeldiniz.**
-/game - Oyunu başlatmak için..
-/pass - Üç adet hakkınız mevcut, oyunu geçmek için.. 
-/skor - Oyuncular arasındaki rekabet bilgisi..
+/oyun - Oyunu başlatmak için..
+/keç - Üç adet hakkınız mevcut, oyunu geçmek için.. 
+/reytinq - Oyuncular arasındaki rekabet bilgisi..
 /cancel - Oyundan çıkmak için gerekli olan komuttur.. 
 """
 
@@ -62,7 +62,7 @@ async def kelimeoyun(c:Client, m:Message):
         oyun[m.chat.id] = {"kelime":kelime_sec()}
         oyun[m.chat.id]["aktif"] = True
         oyun[m.chat.id]["round"] = 1
-        oyun[m.chat.id]["pass"] = 0
+        oyun[m.chat.id]["keç"] = 0
         oyun[m.chat.id]["oyuncular"] = {}
         
         kelime_list = ""
@@ -75,9 +75,9 @@ async def kelimeoyun(c:Client, m:Message):
         text = f"""
 🎯 Raund : {oyun[m.chat.id]['round']}/60 
 📝 Söz :   <code>{kelime_list}</code>
-💰 Kazandığınız Puan: 1
+💰 qazandığınız Puan: 1
 🔎 İpucu: 1. {oyun[m.chat.id]["kelime"][0]}
-✍🏻 Uzunluk : {int(len(kelime_list)/2)} 
+✍🏻 Uzunluq : {int(len(kelime_list)/2)} 
 
 ✏️ Karışık harflerden doğru kelimeyi bulun
         """
