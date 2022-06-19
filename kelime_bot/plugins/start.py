@@ -11,7 +11,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 keyboard = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton("➕ Grubuna Ekle", url=f"http://t.me/TapmacaOyunBot?startgroup=new")
+        InlineKeyboardButton("➕ Grubuna Ekle", url=f"http://t.me/SozTapBot?startgroup=new")
     ],
     [
         InlineKeyboardButton("🇦🇿 Sahibim", url="https://t.me/Thagiyevvvv"),
