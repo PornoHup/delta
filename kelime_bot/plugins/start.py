@@ -21,30 +21,30 @@ keyboard = InlineKeyboardMarkup([
 
 
 START = """
-**🔮 Merhaba, Kelimeleri tersten bulma oyununa hoş geldin..**
+**🔮 Salam, Sözləri Tapma oyununa xoş geldin..**
 
 ➤ Bilgi için 👉 /help Tıklayın. Komutlar kolay ve basittir. 
 """
 
 HELP = """
 **✌️ Komutlar Menüsüne Hoşgeldiniz.**
-/oyun - Oyunu başlatmak için..
-/keç - Üç adet hakkınız mevcut, oyunu geçmek için.. 
-/reytinq - Oyuncular arasındaki rekabet bilgisi..
-/cancel - Oyundan çıkmak için gerekli olan komuttur.. 
+/oyun - Oyunu başlatmaq için..
+/kec - Üç ədəd hakkınız var, oyunu keçmek üçün.. 
+/reytinq - Oyuncular arasındaki rəqabət bilgisi..
+/cancel - Oyundan çıxmaq üçün lazım olan komuttur.. 
 """
 
 # Komutlar. 
 @Client.on_message(filters.command("start"))
 async def start(bot, message):
-  await message.reply_photo("https://i.ibb.co/K6QTywd/images-17.jpg",caption=START,reply_markup=keyboard)
+  await message.reply_photo("https://images.app.goo.gl/Dys4v3hgKMr4YVmx9",caption=START,reply_markup=keyboard)
 
 @Client.on_message(filters.command("help"))
 async def help(bot, message):
-  await message.reply_photo("https://i.ibb.co/K6QTywd/images-17.jpg",caption=HELP) 
+  await message.reply_photo("https://images.app.goo.gl/Dys4v3hgKMr4YVmx9",caption=HELP) 
 
 # Oyunu başlat. 
-@Client.on_message(filters.command("game")) 
+@Client.on_message(filters.command("oyun")) 
 async def kelimeoyun(c:Client, m:Message):
     global oyun
     aktif = False
@@ -55,14 +55,14 @@ async def kelimeoyun(c:Client, m:Message):
         aktif = False
 
     if aktif:
-        await m.reply("**❗ Oyun Zaten Grubunuzda Devam Ediyor ✍🏻 \n Oyunu durdurmak için yazıp /cancel durdurabilirsiniz")
+        await m.reply("**❗ Oyun Zaten Qrubunuzda Davam Edir ✍🏻 \n Oyunu dayandırmaq üçün yazıp /cancel dayandırabilərsiz")
     else:
-        await m.reply(f"**{m.from_user.mention}** Tarafından! \nKelime Bulma Oyunu Başladı .\n\nİyi Şanslar !", reply_markup=kanal)
+        await m.reply(f"**{m.from_user.mention}** Tarafından! \nSözü Tapma Oyunu Başladı .\n\nİyi Şanslar !", reply_markup=kanal)
         
-        oyun[m.chat.id] = {"kelime":kelime_sec()}
+        oyun[m.chat.id] = {"söz":söz_sec()}
         oyun[m.chat.id]["aktif"] = True
         oyun[m.chat.id]["round"] = 1
-        oyun[m.chat.id]["keç"] = 0
+        oyun[m.chat.id]["kec"] = 0
         oyun[m.chat.id]["oyuncular"] = {}
         
         kelime_list = ""
@@ -75,11 +75,11 @@ async def kelimeoyun(c:Client, m:Message):
         text = f"""
 🎯 Raund : {oyun[m.chat.id]['round']}/60 
 📝 Söz :   <code>{kelime_list}</code>
-💰 qazandığınız Puan: 1
-🔎 İpucu: 1. {oyun[m.chat.id]["kelime"][0]}
+💰 Qazandığınız Rəqəm: 1
+🔎 Yardım: 1. {oyun[m.chat.id]["kelime"][0]}
 ✍🏻 Uzunluq : {int(len(kelime_list)/2)} 
 
-✏️ Karışık harflerden doğru kelimeyi bulun
+✏️ Qarışıq hərflərdən doğru sözü tapın 
         """
         await c.send_message(m.chat.id, text)
         
