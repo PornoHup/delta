@@ -37,11 +37,11 @@ HELP = """
 # Komutlar. 
 @Client.on_message(filters.command("start"))
 async def start(bot, message):
-  await message.reply_photo("https://images.app.goo.gl/FXx814CrPxvjhqag8",caption=START,reply_markup=keyboard)
+  await message.reply_photo("https://images.app.goo.gl/eKtuvcAF4cnMyenL8",caption=START,reply_markup=keyboard)
 
 @Client.on_message(filters.command("help"))
 async def help(bot, message):
-  await message.reply_photo("https://images.app.goo.gl/FXx814CrPxvjhqag8",caption=HELP) 
+  await message.reply_photo("https://images.app.goo.gl/eKtuvcAF4cnMyenL8",caption=HELP) 
 
 # Oyunu başlat. 
 @Client.on_message(filters.command("oyun")) 
@@ -57,7 +57,7 @@ async def kelimeoyun(c:Client, m:Message):
     if aktif:
         await m.reply("**❗ Oyun onsuzda Qrubunuzda Davam Edir ✍🏻 \n Oyunu dayandırmaq üçün yazıp /cancel dayandırabilərsiz")
     else:
-        await m.reply(f"**{m.from_user.mention}** Tarafından! \nSözü Tapma Oyunu Başladı .\n\nİyi Şanslar !", reply_markup=kanal)
+        await m.reply(f"**{m.from_user.mention}** Tarafından! \nSözü Tapma Oyunu Başladı .\n\ Uğurlar !", reply_markup=kanal)
         
         oyun[m.chat.id] = {"kelime":kelime_sec()}
         oyun[m.chat.id]["aktif"] = True
@@ -73,6 +73,8 @@ async def kelimeoyun(c:Client, m:Message):
             kelime_list+= harf + " "
         
         text = f"""
+
+
 🎯 Raund : {oyun[m.chat.id]['round']}/60 
 📝 Söz :   <code>{kelime_list}</code>
 💰 Qazandığınız Rəqəm: 1
