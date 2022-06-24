@@ -11,7 +11,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 keyboard = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton("➕ Grubuna Ekle", url=f"http://t.me/SozTapBot?startgroup=new")
+        InlineKeyboardButton("➕ Məni Qrubuna atila", url=f"http://t.me/SozTapBot?startgroup=new")
     ],
     [
         InlineKeyboardButton("🇦🇿 Sahibim", url="https://t.me/Thagiyevvvv"),
@@ -27,7 +27,7 @@ START = """
 """
 
 HELP = """
-**✌️ Komutlar Menüsüne Hoşgeldiniz.**
+**✌️ Ayaralar Menüsünə Xoşgeldiniz.**
 /oyun - Oyunu başlatmaq için..
 /kec - Üç ədəd hakkınız var, oyunu keçmek üçün.. 
 /reytinq - Oyuncular arasındaki rəqabət bilgisi..
