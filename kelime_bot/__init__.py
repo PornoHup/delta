@@ -18,20 +18,20 @@ LOGGER = logging.getLogger(__name__)
 API_ID = "15283231"
 API_HASH = "36e3686358ae38f722dce5c7d5b59902"
 TOKEN = "5484944695:AAF7LVwQKsr2gWNW6cd58qHv-IhXwHa0as4" 
-USERNAME = "5484944695"
+USERNAME = "5249642922"
 
 
 
 
 # BOT CLIENTİ
-bot = Client(
+bot = Client
     ":memory:",
     API_ID,
     API_HASH,
     bot_token=TOKEN,
     plugins=dict(root="kelime_bot/plugins/"),
     workers=16
-    )
+
 
 
 # Oyun Verileri
