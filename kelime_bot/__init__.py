@@ -15,9 +15,9 @@ LOGGER = logging.getLogger(__name__)
 
 
 # Hesap
-API_ID = "15283231"
-API_HASH = "36e3686358ae38f722dce5c7d5b59902"
-TOKEN = "5447017941:AAFLZQoXQqWaq2j0IBdTS6s1xFDxRf7vOj8" 
+API_ID = "12349641"
+API_HASH = "0f9159afc920f9c592df555e4b1cb73b"
+TOKEN = "5122488084:AAEduZCJrYYjwIU1ka-EbjmjF_VoOiwupY8" 
 USERNAME = "5249642922"
 
 
@@ -29,7 +29,7 @@ bot = Client
     API_ID,
     API_HASH,
     bot_token=TOKEN,
-    plugins=dict(root="kelime_bot/plugins/"),
+    plugins=dict(root="soztapbot/plugins/"),
     workers=16
 
 
