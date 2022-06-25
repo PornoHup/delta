@@ -29,7 +29,7 @@ bot = Client
     API_ID,
     API_HASH,
     bot_token=TOKEN,
-    plugins=dict(root="soztap_bot/plugins/"),
+    plugins=dict(root="kelime_bot/plugins/"),
     workers=16
 
 
