@@ -23,7 +23,7 @@ keyboard = InlineKeyboardMarkup([
 START = """
 **🔮 Salam, Sözləri Tapma oyununa xoş geldin..**
 
-➤ Bilgi için 👉 /help Tıklayın. Komutlar asand ve sadədir. 
+➤ Məlumat üçün 👉 /help Basın. Ayarlar asand ve sadədir. 
 """
 
 HELP = """
@@ -55,9 +55,9 @@ async def kelimeoyun(c:Client, m:Message):
         aktif = False
 
     if aktif:
-        await m.reply("**❗ Oyun onsuzda Qrubunuzda Davam Edir ✍🏻 \n Oyunu dayandırmaq üçün yazıp /cancel dayandırabilərsiz")
+        await m.reply("**❗ Oyun onsuzda Qrubunuzda Davam Edir ✍🏻 \n Oyunu dayandırmaq üçün yazıb /cancel dayandırabilərsiz")
     else:
-        await m.reply(f"**{m.from_user.mention}** Tarafından! \nSözü Tapma Oyunu Başladı .\n\ Uğurlar !", reply_markup=kanal)
+        await m.reply(f"**{m.from_user.mention}** Tərəfından! \nSözü Tapma Oyunu Başladı .\n\ Uğurlar !", reply_markup=kanal)
         
         oyun[m.chat.id] = {"kelime":kelime_sec()}
         oyun[m.chat.id]["aktif"] = True
